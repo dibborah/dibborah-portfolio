@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
-
+import { Github, Linkedin, Glasses } from "lucide-react";
+// Mail
 const Hero = () => {
   return (
     <motion.section 
@@ -68,10 +68,12 @@ const Hero = () => {
             <Linkedin className="w-6 h-6 text-[#1A1F2C]" />
           </a>
           <a 
-            href="https://mail.google.com/"
+            // href="https://mail.google.com/"
+            href="https://dibborah.github.io/dibborah-resume/"
             className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
           >
-            <Mail className="w-6 h-6 text-[#1A1F2C]" />
+            {/* <Mail className="w-6 h-6 text-[#1A1F2C]" /> */}
+            <Glasses className="w-6 h-6 text-[#1A1F2C]" />
           </a>
         </motion.div>
       </div>
