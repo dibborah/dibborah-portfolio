@@ -41,7 +41,7 @@ const Skills = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
             <motion.div
-              key={index}
+              key={index + 1}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}

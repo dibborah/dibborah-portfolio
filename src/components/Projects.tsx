@@ -67,7 +67,7 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
-              key={index}
+              key={index + 1}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -75,46 +75,48 @@ const Projects = () => {
               className="group relative"
             >
               <div className="bg-white backdrop-blur-sm bg-opacity-70 p-8 rounded-xl border border-gray-100 hover:border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-[#1A1F2C] mb-4 group-hover:text-[#6E59A5] transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6 flex-grow">{project.description}</p>
-                  
-                  <div className="space-y-4">
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, i) => (
-                        <span 
-                          key={i} 
-                          className="text-sm px-3 py-1 bg-purple-50 text-[#6E59A5] rounded-full font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                <a href={project.link} className="cursor-pointer">
+                  <div className="flex flex-col h-full">
+                    <h3 className="text-xl font-bold text-[#1A1F2C] mb-4 group-hover:text-[#6E59A5] transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 flex-grow">{project.description}</p>
                     
-                    <div className="flex items-center gap-4">
-                      <a 
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-[#6E59A5] hover:text-[#9b87f5] transition-colors"
-                      >
-                        <Link className="w-4 h-4 mr-1" />
-                        Live Demo
-                      </a>
-                      {/* <a 
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-[#6E59A5] hover:text-[#9b87f5] transition-colors"
-                      >
-                        <Github className="w-4 h-4 mr-1" />
-                        Code
-                      </a> */}
+                    <div className="space-y-4">
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((tech, i) => (
+                          <span 
+                            key={i} 
+                            className="text-sm px-3 py-1 bg-purple-50 text-[#6E59A5] rounded-full font-medium"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      <div className="flex items-center gap-4">
+                        <a 
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-[#6E59A5] hover:text-[#9b87f5] transition-colors"
+                        >
+                          <Link className="w-4 h-4 mr-1" />
+                          Live Demo
+                        </a>
+                        {/* <a 
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-[#6E59A5] hover:text-[#9b87f5] transition-colors"
+                        >
+                          <Github className="w-4 h-4 mr-1" />
+                          Code
+                        </a> */}
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </motion.div>
           ))}
