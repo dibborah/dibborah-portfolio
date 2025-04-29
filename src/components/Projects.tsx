@@ -7,7 +7,7 @@ const projects = [
   {
     title: "Food Ordering Website",
     description: "Streamlined order management system for businesses.",
-    link: "https://dibborah.fun.bingecrave.com/",
+    link: "https://dibborah.github.io/bingecrave/",
     github: "#",
     // tech: ["Next.js", "TypeScript", "Prisma", "TailwindCSS"]
     tech: ["React", "TypeScript", "TailwindCSS", "react-hook-form", "zod"]
