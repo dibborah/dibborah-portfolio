@@ -14,9 +14,9 @@ const skills = [
   "React Hook Form",
   "Zustand",
   "Tailwind",
-  // "Node.js",
-  // "REST APIs",
-  // "MongoDB",
+  "Node.js",
+  "REST APIs",
+  "MongoDB",
   // "PostgreSQL"
 ];
 
